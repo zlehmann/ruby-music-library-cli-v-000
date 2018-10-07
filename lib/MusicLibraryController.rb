@@ -107,5 +107,6 @@ class MusicLibraryController
     if input <= length
       puts "Playing #{sorted_song_list[input + 1].name} by #{sorted_song_list[input + 1].artist.name}"
     end
+    binding.pry
   end
 end
