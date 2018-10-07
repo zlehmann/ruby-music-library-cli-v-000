@@ -32,7 +32,7 @@ class MusicLibraryController
     when 'play song'
       #stuff
     when 'exit'
-      break
+
     else
       puts "Sorry that is not a valid input."
       self.call
