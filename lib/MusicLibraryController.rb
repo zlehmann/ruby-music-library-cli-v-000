@@ -104,7 +104,7 @@ class MusicLibraryController
     sorted_song_list = song_list.sort_by { |song| song.name }
     length = song_list.length
     input = gets.strip
-    if input > length != false
+    if input <= length
       puts "Playing #{sorted_song_list[input + 1].name} by #{sorted_song_list[input + 1].artist.name}"
     end
   end
