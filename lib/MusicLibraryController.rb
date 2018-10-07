@@ -20,21 +20,22 @@ class MusicLibraryController
 
     case input
     when 'list songs'
-      stuff
+      #stuff
     when 'list artists'
-      stuff
+      #stuff
     when 'list genres'
-      stuff
+      #stuff
     when 'list artist'
-      stuff
+      #stuff
     when 'list genre'
-      stuff
+      #stuff
     when 'play song'
-      stuff
+      #stuff
     when 'exit'
-      stuff
+      break
     else
       puts "Sorry that is not a valid input."
+      self.call
     end
   end
 
