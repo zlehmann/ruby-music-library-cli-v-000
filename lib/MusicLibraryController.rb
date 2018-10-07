@@ -22,7 +22,7 @@ class MusicLibraryController
     when 'list songs'
       self.list_songs
     when 'list artists'
-      #stuff
+      self.list_artists
     when 'list genres'
       #stuff
     when 'list artist'
