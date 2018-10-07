@@ -31,7 +31,7 @@ class MusicLibraryController
     when 'list genre'
       self.list_songs_by_genre
     when 'play song'
-      #stuff
+      self.play_song
     when 'exit'
 
     else
@@ -95,6 +95,17 @@ class MusicLibraryController
         puts "#{count}. #{song.artist.name} - #{song.name}"
         count += 1
       end
+    end
+  end
+
+  def play_song
+    puts "Which song number would you like to play?"
+    song_list = Song.all
+    sorted_song_list = song_list.sort_by { |song| song.name }
+    length = song_list.length
+    input = gets.strip
+    if input > length != false
+      puts "Playing #{sorted_song_list[input + 1].name} by #{sorted_song_list[input + 1].artist.name}"
     end
   end
 end
