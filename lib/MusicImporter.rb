@@ -12,7 +12,7 @@ class MusicImporter
 
   def files
     Dir.entries(@fielpath).each do |file|
-      @files << File
+      @files << file
     end
     @files
   end
