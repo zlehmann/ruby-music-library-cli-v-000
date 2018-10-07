@@ -79,4 +79,5 @@ class MusicLibraryController
       puts "#{count}. #{song.name} = #{song.genre}"
       count += 1
     end
+  end
 end
