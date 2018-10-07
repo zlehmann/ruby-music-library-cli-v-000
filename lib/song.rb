@@ -65,7 +65,8 @@ class Song
     if find_results != []
       return find_results
     else
-      self.create(name)
+      new_song = Song.create(name)
+      return new_song
     end
   end
 
