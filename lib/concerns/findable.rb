@@ -4,7 +4,7 @@ module Concerns::Findable
     results[0]
   end
 
-  def self.find_or_create_by_name(name)
+  def find_or_create_by_name(name)
     find_results = self.find_by_name(name)
     if find_results != nil
       return find_results
