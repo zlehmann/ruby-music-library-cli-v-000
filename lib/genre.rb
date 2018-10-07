@@ -44,4 +44,6 @@ class Genre
     return results
   end
 
+  extend Concerns::Findable
+
 end
