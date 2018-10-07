@@ -1,3 +1,4 @@
+require 'pry'
 class Song
   attr_accessor :name
 
@@ -67,6 +68,7 @@ class Song
     else
       new_song = Song.create(name)
       return new_song
+      binding.pry
     end
   end
 
