@@ -53,7 +53,7 @@ class MusicLibraryController
     artist_list = Artist.all
     sorted_artist_list = artist_list.sort_by { |artist| artist.name }
     count = 1
-    sorted_song_list.each do |artist|
+    sorted_artist_list.each do |artist|
       puts "#{count}. #{artist.name}"
       count += 1
     end
