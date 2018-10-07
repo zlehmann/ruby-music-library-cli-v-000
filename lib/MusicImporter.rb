@@ -2,12 +2,12 @@ class MusicImporter
   attr_accessor :filepath, :files
 
   def initialize(filepath)
-    @filepath = filepath
+    @path = filepath
     @files = []
   end
 
   def path
-    @filepath
+    @path
   end
 
   def files
@@ -20,4 +20,4 @@ class MusicImporter
   def self.import
 
   end
-end 
+end
