@@ -61,8 +61,9 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    if self.find_by_name(name) != []
-      return self.find_by_name(name)
+    find_results = self.find_by_name(name)
+    if find_results != []
+      return find_results
     else
       self.create(name)
     end
