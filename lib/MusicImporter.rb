@@ -20,7 +20,7 @@ class MusicImporter
 
   def import
     @files.each do |file|
-      new_song = Song.create_from_filename(file)
+      Song.create_from_filename(file)
     end
   end
 end
