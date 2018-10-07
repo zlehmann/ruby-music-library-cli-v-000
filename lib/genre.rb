@@ -33,6 +33,15 @@ class Genre
     @songs
   end
 
-
+  def artists
+    results = []
+    songs = self.songs
+    songs.each do |song|
+      if results.include?(song.artist) == false
+        results << song.artist
+      end
+    end
+    return results
+  end
 
 end
