@@ -17,6 +17,26 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
     input = gets.strip
+
+    case input
+    when 'list songs'
+      stuff
+    when 'list artists'
+      stuff
+    when 'list genres'
+      stuff
+    when 'list artist'
+      stuff
+    when 'list genre'
+      stuff
+    when 'play song'
+      stuff
+    when 'exit'
+      stuff
+    else
+      puts "Sorry that is not a valid input."
+    end
   end
+
 
 end
