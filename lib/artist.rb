@@ -37,8 +37,8 @@ class Artist
     if song.artist != ""
       song.artist = self
     end
-    if @song.exclude?(song)
-      @song << song
+    if @songs.exclude?(song)
+      @songs << song
     end
   end
 
