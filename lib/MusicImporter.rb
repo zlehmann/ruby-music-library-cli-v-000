@@ -19,6 +19,8 @@ class MusicImporter
   end
 
   def self.import
-
+    @files.each do |file|
+      new_song = Song.new(file)
+    end
   end
 end
