@@ -1,4 +1,3 @@
-require 'pry'
 class Song
   attr_accessor :name
 
@@ -66,9 +65,8 @@ class Song
     if find_results != []
       return find_results
     else
-      new_song = Song.create(name)
+      new_song = self.create(name)
       return new_song
-      binding.pry
     end
   end
 
