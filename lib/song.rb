@@ -62,7 +62,7 @@ class Song
 
   def self.find_or_create_by_name(name)
     find_results = self.find_by_name(name)
-    if find_results != []
+    if find_results != nil
       return find_results
     else
       new_song = self.create(name)
