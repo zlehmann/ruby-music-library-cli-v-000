@@ -29,7 +29,7 @@ class MusicLibraryController
     when 'list artist'
       self.list_songs_by_artist
     when 'list genre'
-      #stuff
+      self.list_songs_by_genre
     when 'play song'
       #stuff
     when 'exit'
@@ -79,6 +79,20 @@ class MusicLibraryController
       count = 1
       songs.each do |song|
         puts "#{count}. #{song.name} - #{song.genre.name}"
+        count += 1
+      end
+    end
+  end
+
+  def list_songs_by_genre
+    puts "Please enter the name of a genre:"
+    input = gets.strip
+    genre = Genre.find_by_name(input)
+    if genre != nil
+      songs = genre.songs.sort_by { |song| song.name }
+      count = 1
+      songs.each do |song|
+        puts "#{count}. #{song.artist.name} - #{song.name}"
         count += 1
       end
     end
