@@ -73,6 +73,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets
     artist = Artist.find_by_name(input)
+    puts "#{artist}"
     songs = artist.songs.sort_by { |song| song.name }
     count = 1
     songs.each do |song|
