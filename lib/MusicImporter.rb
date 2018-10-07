@@ -11,7 +11,7 @@ class MusicImporter
   end
 
   def files
-    Dir.entries(@path).each do |file|
+    Dir.glob("#{@path}/*.mp3").each do |file|
       @files << file
     end
     @files
