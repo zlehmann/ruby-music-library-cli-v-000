@@ -50,6 +50,7 @@ class Artist
         results << song.genre
       end
     end
+    return results
   end
 
 
