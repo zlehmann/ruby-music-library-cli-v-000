@@ -70,5 +70,11 @@ class Song
     end
   end
 
+  def self.new_from_filename(filename)
+    new_song = Song.create(filename.split(" - ")[1])
+  end
 
+  def self.create_from_filename(filename)
+    new_song = Song.new_from_filename(filename)
+    new_song.save
 end
