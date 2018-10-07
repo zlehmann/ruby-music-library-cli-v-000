@@ -12,7 +12,8 @@ class MusicImporter
 
   def files
     Dir.glob("#{@path}/*.mp3").each do |file|
-      @files << file
+      filename = file.split(%r{/})[-1]
+      @files << filename
     end
     @files
   end
