@@ -20,7 +20,12 @@ class MusicLibraryController
 
     case input
     when 'list songs'
-      #stuff
+      song_list = Song.all
+      sorted_song_list = song_list.sort_by { |song| song.name }
+      count = 1
+      sorted_song_list.each do |song|
+        puts "#{count}. #{song.artist.name} - #{song.name} - #{song.genre}"
+      end
     when 'list artists'
       #stuff
     when 'list genres'
